@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<%= link_to "Carlie La Vallee", root_path, class: "navbar-brand" %>
+
+	<!--Navigation Button-->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+    <%= icon('fas', 'bars') %>
+  </button>
+
+	<!--Navigation Links-->
+ 	<div class="collapse navbar-collapse" id="navContent">
+ 		<ul class="navbar-nav ml-auto">
+ 			<li class="nav-item">
+ 				<%= link_to "About", "#", class: "nav-link" %>
+ 			</li>
+ 			<li class="nav-item">
+ 				<%= link_to "Resume", "#", class: "nav-link" %>
+ 			</li>
+ 			<li class="nav-item">
+ 				<%= link_to "Work", "#", class: "nav-link" %>
+ 			</li>
+ 			<li class="nav-item">
+ 				<%= link_to "Contact", "#", class: "nav-link" %>
+ 			</li>
+ 		</ul>
+ 	</div>
+</nav>
