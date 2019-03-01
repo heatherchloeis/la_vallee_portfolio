@@ -1,11 +1,11 @@
 <footer class="fixed-bottom">
 	<% if logged_in? %>
 		<%= link_to logout_path, method: "delete" do %>
-			<%= icon('fas', 'unlock') %>
+			<%= icon('fas', 'lock') %>
 		<% end %>
 	<% else %>
 		<%= link_to login_path do %>
-			<%= icon('fas', 'lock') %>
+			<%= icon('fas', 'unlock') %>
 		<% end %>
 	<% end %>
 </footer>

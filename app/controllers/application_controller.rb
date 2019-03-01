@@ -6,6 +6,22 @@ class ApplicationController < ActionController::Base
 		@title = "Home"
 	end	
 
+	def about
+		@title = "About Myself"
+	end
+
+	def work
+		@title = "My Work"
+	end
+
+	def resume
+		@title = "My Resume"
+	end
+
+	def contact
+		@title = "Let's Connect"
+	end
+
 	private
 		# Confirms logged-in user
 		def logged_in_user
