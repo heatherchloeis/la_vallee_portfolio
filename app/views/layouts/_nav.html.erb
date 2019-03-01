@@ -1,0 +1,5 @@
+<% if logged_in? %>
+	<%= render 'layouts/private_navigation' %>
+<% else %>
+	<%= render 'layouts/public_navigation' %>
+<% end %>

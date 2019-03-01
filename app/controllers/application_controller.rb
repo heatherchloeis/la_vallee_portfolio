@@ -4,5 +4,15 @@ class ApplicationController < ActionController::Base
 	
 	def home
 		@title = "Home"
-	end
+	end	
+
+	private
+		# Confirms logged-in user
+		def logged_in_user
+			unless logged_in?
+				store_location
+				flash[:danger] = "Please log in (ﾉಠ_ಠ)ﾉ 彡 ┻━┻"
+				redirect_to login_url
+			end
+		end
 end

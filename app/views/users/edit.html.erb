@@ -1,0 +1,26 @@
+<% provide(:title, "Edit Profile") %>
+
+<p>Update Your Profile</p>
+
+<div class="row">
+	<div class="col">
+		<%= form_for(@user) do |f| %>
+			<%= f.label :name %>
+			<%= f.text_field :name, class: "form-control form-control-sm" %>
+
+			<%= f.label :title %>
+			<%= f.text_field :title, class: "form-control form-control-sm" %>
+
+			<%= f.label :email %>
+			<%= f.text_field :email, class: "form-control form-control-sm" %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password, class: "form-control form-control-sm" %>
+
+			<%= f.label :password_confirmation %>
+			<%= f.password_field :password_confirmation, class: "form-control form-control-sm" %>
+
+			<%= f.submit "Save changes", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+</div>

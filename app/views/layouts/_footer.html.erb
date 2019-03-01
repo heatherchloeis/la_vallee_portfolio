@@ -1,8 +1,5 @@
 <footer class="fixed-bottom">
 	<% if logged_in? %>
-		<%= link_to "#" do %>
-			<%= icon('fas', 'tools') %>
-		<% end %>
 		<%= link_to logout_path, method: "delete" do %>
 			<%= icon('fas', 'unlock') %>
 		<% end %>
