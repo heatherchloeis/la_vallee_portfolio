@@ -6,6 +6,8 @@ class User < ApplicationRecord
 										format: { with: URI::MailTo::EMAIL_REGEXP },
 										uniqueness: { case_sensitive: false }
 	validates :password, presence: true, length: { minimum: 8 }, allow_nil: true
+	validates :title, 	 presence: true, length: { minimum: 4, maximum: 240 }
+	validates :bio, 		 presence: true, length: {  minimum: 4 }
 	has_secure_password
 
 	class << self

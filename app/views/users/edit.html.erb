@@ -1,15 +1,14 @@
 <% provide(:title, "Edit Profile") %>
 
-<p>Update Your Profile</p>
-
 <div class="row">
-	<div class="col">
+	<div class="col-4 offset-4">
+		<p>Settings</p>
 		<%= form_for(@user) do |f| %>
-			<%= f.label :name %>
+<!-- 			<%= f.label :name %>
 			<%= f.text_field :name, class: "form-control form-control-sm" %>
 
 			<%= f.label :title %>
-			<%= f.text_field :title, class: "form-control form-control-sm" %>
+			<%= f.text_field :title, class: "form-control form-control-sm" %> -->
 
 			<%= f.label :email %>
 			<%= f.text_field :email, class: "form-control form-control-sm" %>

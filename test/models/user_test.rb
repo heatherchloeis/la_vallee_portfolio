@@ -6,33 +6,41 @@ class UserTest < ActiveSupport::TestCase
 										 email: "user@example.com",
 										 title: "Admin",
 										 password: "password",
-										 password_confirmation: "password")
+										 password_confirmation: "password",
+										 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt lorem. Donec ac est lorem. Ut vitae magna facilisis, tincidunt quam ac, fringilla nunc. Morbi at facilisis augue. Sed vitae iaculis odio, non blandit justo. Vestibulum posuere vel enim eu viverra. Sed aliquam ornare arcu, sed suscipit risus. Nulla tristique ante quis euismod pharetra. Nunc bibendum, augue vel mollis consectetur, orci lectus condimentum metus, id viverra augue est eu ante. Donec sit amet sem erat. Aenean ut euismod arcu. Donec fermentum tincidunt quam ut facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.")
 		@other_user = User.new(name: "Other User",
 										 			 email: "other_user@example.com",
 										 			 password: "password",
-										 			 password_confirmation: "password")
+										 			 password_confirmation: "password",
+										 			 title: "artist",
+										 			 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt lorem. Donec ac est lorem. Ut vitae magna facilisis, tincidunt quam ac, fringilla nunc. Morbi at facilisis augue. Sed vitae iaculis odio, non blandit justo. Vestibulum posuere vel enim eu viverra. Sed aliquam ornare arcu, sed suscipit risus. Nulla tristique ante quis euismod pharetra. Nunc bibendum, augue vel mollis consectetur, orci lectus condimentum metus, id viverra augue est eu ante. Donec sit amet sem erat. Aenean ut euismod arcu. Donec fermentum tincidunt quam ut facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.")
 	end
 
 	test "should be valid" do 
 		assert @user.valid?
 	end
 
-	test "name email, password should be present" do 
+	test "name email, title, password, and bio should be present" do 
 		@user.name = "   "
 		@user.email = "   "
 		@user.password = "   "
+		@user.title = "   "
+		@user.bio = "   "
 		assert_not @user.valid?
 	end
 
-	test "name and password should have min characters" do
+	test "name, password, title, and bio should have min characters" do
 		@user.name = "a" * 3
 		@user.password = "a" * 7
+		@user.title = "a" * 3
+		@user.bio = "a" * 3
 		assert_not @user.valid?		
 	end
 
-	test "name and email should have max characters" do
+	test "name, email, and title should have max characters" do
 		@user.name = "a" * 51
 		@user.email = "a" * 241 + "example.com"
+		@user.title = "a" * 241
 		assert_not @user.valid?
 	end
 

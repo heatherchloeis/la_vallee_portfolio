@@ -14,8 +14,62 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
 			# Handle a successful user update
-			flash[:success] = "Your Profile Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
-			redirect_to @user
+			flash[:success] = "Your Settings Have Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
+			redirect_to root_url
+		else
+			# Handle an unsuccessful user update
+			flash[:danger] = "Oh Dear (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong! Please Try Again"
+			render 'edit'
+		end
+	end
+
+	# Edit Bio on About Page
+	def edit_bio
+		@user = User.find(params[:id])
+	end
+
+	def update_bio
+		@user = User.find(params[:id])
+		if @user.update_attributes(user_params)
+			# Handle a successful user update
+			flash[:success] = "Your Bio Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
+			redirect_to root_url
+		else
+			# Handle an unsuccessful user update
+			flash[:danger] = "Oh Dear (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong! Please Try Again"
+			render 'edit'
+		end
+	end
+
+	# Edit Name on Home Page
+	def edit_name
+		@user = User.find(params[:id])
+	end
+
+	def update_name
+		@user = User.find(params[:id])
+		if @user.update_attributes(user_params)
+			# Handle a successful user update
+			flash[:success] = "Your Name Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
+			redirect_to root_url
+		else
+			# Handle an unsuccessful user update
+			flash[:danger] = "Oh Dear (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong! Please Try Again"
+			render 'edit'
+		end
+	end
+
+	# Edit Title on Home Page
+	def edit_title
+		@user = User.find(params[:id])
+	end
+
+	def update_title
+		@user = User.find(params[:id])
+		if @user.update_attributes(user_params)
+			# Handle a successful user update
+			flash[:success] = "Your Title Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
+			redirect_to root_url
 		else
 			# Handle an unsuccessful user update
 			flash[:danger] = "Oh Dear (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong! Please Try Again"
@@ -29,6 +83,7 @@ class UsersController < ApplicationController
 																	 :email,
 																	 :password,
 																	 :password_confirmation,
-																	 :title)
+																	 :title,
+																	 :bio)
 		end
 end

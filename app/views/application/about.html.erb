@@ -1,0 +1,13 @@
+<% provide(:title, @title) %>
+
+<div class="row">
+	<div class="col-4 offset-4">
+		<p>About<br>Myself</p>
+		<% if logged_in? %>
+			<%= link_to edit_bio_user_path(current_user), class: "float-right" do %>
+				<%= icon('fas', 'edit') %>
+			<% end %>
+		<% end %>
+		<p><%= carlie.bio %></p>
+	</div>
+</div>

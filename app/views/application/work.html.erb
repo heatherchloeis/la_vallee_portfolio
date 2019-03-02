@@ -1,0 +1,13 @@
+<% provide(:title, @title) %>
+
+<div class="row">
+	<div class="col-4 offset-4">
+		<p>My<br>Work</p>
+		<% if logged_in? %>
+			<%= link_to "", class: "float-right" do %>
+				<%= icon('fas', 'edit') %>
+			<% end %>
+		<% end %>
+		<p></p>
+	</div>
+</div>

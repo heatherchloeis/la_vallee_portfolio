@@ -1,5 +1,23 @@
 <% provide(:title, @title) %>
 
-<p>Portfolio</p>
-<p><%= carlie.name %></p>
-<p><%= carlie.title %></p>
+<div class="row">
+	<div class="col-4 offset-4">
+		<p>Portfolio</p>
+		<p>
+			<%= carlie.name %>
+			<% if logged_in? %>
+				<%= link_to edit_name_user_path(current_user) do %>
+					<%= icon('fas', 'edit') %>
+				<% end %>
+			<% end %>
+		</p>
+		<p>
+			<%= carlie.title %>
+			<% if logged_in? %>
+				<%= link_to edit_title_user_path(current_user) do %>
+					<%= icon('fas', 'edit') %>
+				<% end %>
+			<% end %>
+			</p>
+	</div>
+</div>
