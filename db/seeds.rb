@@ -14,3 +14,19 @@ Education.create!(school: "Art Institue, Ontario",
 									year: "2010 - 2012",
 									degree: "BA",
 									major: "2D Modeling in Animation and Gaming")
+
+Experience.create!(company: "Icon Creative Studios",
+									 location: "Vancouver",
+									 title: "Lighting TD and Compositing Artist",
+									 year: "2014 - PRESENT",
+									 desc: "-Disney’s Goldie and Bear Season 1 and 2, Elena Princess of Avalor;
+-Netflix Original: Super Monsters, Kong: King of Apes, Tarzan and Jane
+● Lighting and compositing shots and sequences over the course of several seasons
+● Optimizing and troubleshooting scenes effectively, and working with other department heads
+to find solutions
+● Presenting work professionally to Leads and Supervisors, and efficiently turning around
+internal and client revisions
+● Communicating well with other Artists, Production, Leads and Supervisors, as well as
+occasionally taking over leadership roles
+● Able to easily integrate into new production teams mid-project, and manage tasks across
+multiple productions simultaneously")
