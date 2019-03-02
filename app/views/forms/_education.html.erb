@@ -1,0 +1,25 @@
+<%= form_for(@education) do |f| %>
+	<div class="form-group row">
+		<div class="col">
+			<%= f.label :school %>
+			<%= f.text_field :school, class: "form-control form-control-sm" %>
+		</div>
+
+		<div class="col">
+			<%= f.label :year %>
+			<%= f.text_field :year, class: "form-control form-control-sm" %>
+		</div>
+
+		<div class="col">
+			<%= f.label :degree %>
+			<%= f.text_field :degree, class: "form-control form-control-sm" %>
+		</div>
+
+		<div class="col">
+			<%= f.label :major %>
+			<%= f.text_field :major, class: "form-control form-control-sm" %>
+		</div>
+	</div>
+
+	<%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

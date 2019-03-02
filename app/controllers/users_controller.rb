@@ -2,6 +2,12 @@ class UsersController < ApplicationController
 	before_action :logged_in_user, only: [:edit,
                                         :update]
 
+  before_action :set_user, 			 only: [:edit,
+  																			:update,
+  																			:update_bio,
+  																			:update_name,
+  																			:update_title]
+
 	def index
 		@users = User.all
 	end
@@ -11,7 +17,6 @@ class UsersController < ApplicationController
 	end
 
 	def update
-		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
 			# Handle a successful user update
 			flash[:success] = "Your Settings Have Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
@@ -24,16 +29,11 @@ class UsersController < ApplicationController
 	end
 
 	# Edit Bio on About Page
-	def edit_bio
-		@user = User.find(params[:id])
-	end
-
 	def update_bio
-		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
 			# Handle a successful user update
 			flash[:success] = "Your Bio Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
-			redirect_to root_url
+			redirect_back_or root_url
 		else
 			# Handle an unsuccessful user update
 			flash[:danger] = "Oh Dear (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong! Please Try Again"
@@ -42,12 +42,7 @@ class UsersController < ApplicationController
 	end
 
 	# Edit Name on Home Page
-	def edit_name
-		@user = User.find(params[:id])
-	end
-
 	def update_name
-		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
 			# Handle a successful user update
 			flash[:success] = "Your Name Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
@@ -60,12 +55,7 @@ class UsersController < ApplicationController
 	end
 
 	# Edit Title on Home Page
-	def edit_title
-		@user = User.find(params[:id])
-	end
-
 	def update_title
-		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
 			# Handle a successful user update
 			flash[:success] = "Your Title Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
@@ -85,5 +75,9 @@ class UsersController < ApplicationController
 																	 :password_confirmation,
 																	 :title,
 																	 :bio)
+		end
+
+		def set_user
+			@user = User.find(params[:id])
 		end
 end

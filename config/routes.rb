@@ -10,10 +10,11 @@ Rails.application.routes.draw do
 
 	resources :users do
 		member do
-			get 'edit_bio',	to: "users#edit_bio"
+			get 'edit_bio',		to: "users#edit_bio"
 			get 'edit_name',	to: "users#edit_name"
 			get 'edit_title',	to: "users#edit_title"
 		end
 	end
+	resources :educations
 	resources :password_resets, only: [:new, :create, :edit, :update]
 end

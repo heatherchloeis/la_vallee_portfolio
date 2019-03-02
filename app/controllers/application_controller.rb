@@ -16,6 +16,8 @@ class ApplicationController < ActionController::Base
 
 	def resume
 		@title = "My Resume"
+		@educations = Education.all
+		@education = Education.new
 	end
 
 	def contact
