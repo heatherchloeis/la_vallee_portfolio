@@ -1,15 +1,13 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  company: MyString
-  location: MyString
-  title: MyString
-  year: MyString
-  desc: MyText
+  company: Apple
+  location: Silicon Valley
+  title: Lighting Artist
+  year: 2014 - 2016
+  desc: Lorem ipsum
 
 two:
-  company: MyString
-  location: MyString
-  title: MyString
-  year: MyString
-  desc: MyText
+  company: Google
+  location: San Francisco
+  title: 3D Light Artist
+  year: 2016 - 2018
+  desc: Lorem ipsum

@@ -1,0 +1,5 @@
+<% if e.category.to_s == "image" %>
+	<%= image_tag e.content %>
+<% elsif e.category.to_s == "video" %>
+	<%= video_tag e.content %>
+<% end %>

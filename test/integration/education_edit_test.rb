@@ -20,12 +20,6 @@ class EducationEditTest < ActionDispatch::IntegrationTest
 		assert_not flash.empty?
 	end
 
-	test "should redirect edit when not logged in" do
-		get edit_education_path(@education)
-		assert_not flash.empty?
-		assert_redirected_to login_url
-	end
-
 	test "should redirect update when not logged in" do
 		patch education_path(@education), params: { education: { school: @education.school,
 																														 year: @education.year } }

@@ -6,22 +6,22 @@ class ExperiencesController < ApplicationController
                                       		:destroy]
 
   def create
-  	@experience = Experience.new
+  	@experience = Experience.new(experience_params)
   	if @experience.save
 			flash[:success] = "Congrats (ﾉ●ω●)ﾉ*:･ﾟ✧ You've Successfully Added to Your Experience"
 		else
 			flash[:danger] = "Oh no (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong with Your Submission! Please Try Again"
   	end
-		redirect_back_or root_url
+		redirect_to request.referrer || root_url
   end
 
   def update
-		if @experience.update_attributes(education_params)
+		if @experience.update_attributes(experience_params)
 			flash[:success] = "Congrats (ﾉ●ω●)ﾉ*:･ﾟ✧ You've Successfully Edited Your Experience"
 		else
 			flash[:danger] = "Oh no (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong with Your Submission! Please Try Again"
 		end
-		redirect_back_or root_url
+		redirect_to request.referrer || root_url
   end
 
   def destroy
@@ -31,7 +31,7 @@ class ExperiencesController < ApplicationController
   end
 
   private
-  	def education_params
+  	def experience_params
   		params.require(:experience).permit(:company,
   																			 :location,
   																			 :title,

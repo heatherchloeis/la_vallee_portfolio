@@ -1,0 +1,27 @@
+<%= form_for(@example, html: { multipart: true }) do |f| %>
+		<div class="form-group">
+			<%= f.label :category %>
+			<%= f.select :category, options_for_category, prompt: "-select one-", class: "form-control form-control-sm" %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :title %>
+			<%= f.text_field :title, class: "form-control form-control-sm" %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :content %>
+			<%= f.file_field :content %>
+		</div>
+
+	<%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+
+<script type="text/javascript">
+	$('#post_picture').bind('change', function() {
+		var size_in_megabytes = this.files[0].size / 1024 / 1024;
+		if (size_in_megabytes > 5) {
+			alert('Maximum file size is 5MB');
+		}
+	});
+</script>

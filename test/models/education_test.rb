@@ -19,4 +19,8 @@ class EducationTest < ActiveSupport::TestCase
 		@education.major = "   "
 		assert_not @education.valid?
 	end
+
+	test "should be shown most recent first" do
+		assert_equal educations(:two), Education.first
+	end
 end

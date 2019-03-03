@@ -17,5 +17,6 @@ Rails.application.routes.draw do
 	end
 	resources :educations
 	resources :experiences
+	resources :examples
 	resources :password_resets, only: [:new, :create, :edit, :update]
 end

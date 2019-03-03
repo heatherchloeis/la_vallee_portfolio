@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
 
 	def work
 		@title = "My Work"
+		@example = Example.new
+		@examples = Example.all
 	end
 
 	def resume

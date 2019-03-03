@@ -6,13 +6,13 @@ class EducationsController < ApplicationController
                                       	:destroy]
 
   def create
-  	@education = Education.new
+  	@education = Education.new(education_params)
   	if @education.save
 			flash[:success] = "Congrats (ﾉ●ω●)ﾉ*:･ﾟ✧ You've Successfully Added to Your Education"
 		else
 			flash[:danger] = "Oh no (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong with Your Submission! Please Try Again"
   	end
-		redirect_back_or root_url
+		redirect_to request.referrer || root_url
   end
 
   def update
@@ -21,7 +21,7 @@ class EducationsController < ApplicationController
 		else
 			flash[:danger] = "Oh no (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong with Your Submission! Please Try Again"
 		end
-		redirect_back_or root_url
+		redirect_to request.referrer || root_url
   end
 
   def destroy
