@@ -1,0 +1,9 @@
+<%= form_for(@contact) do |f| %>
+	<%= f.text_field :name, class: "form-control form-control-sm", placeholder: "Name/Company" %>
+
+	<%= f.text_field :email, class: "form-control form-control-sm", placeholder: "Email" %>
+
+	<%= f.text_area :message, class: "form-control form-control-sm", placeholder: "Message", rows: "5" %>
+
+	<%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

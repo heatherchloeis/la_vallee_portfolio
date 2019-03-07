@@ -28,45 +28,6 @@ class UsersController < ApplicationController
 		end
 	end
 
-	# Edit Bio on About Page
-	def update_bio
-		if @user.update_attributes(user_params)
-			# Handle a successful user update
-			flash[:success] = "Your Bio Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
-			redirect_back_or root_url
-		else
-			# Handle an unsuccessful user update
-			flash[:danger] = "Oh Dear (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong! Please Try Again"
-			render 'edit'
-		end
-	end
-
-	# Edit Name on Home Page
-	def update_name
-		if @user.update_attributes(user_params)
-			# Handle a successful user update
-			flash[:success] = "Your Name Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
-			redirect_to root_url
-		else
-			# Handle an unsuccessful user update
-			flash[:danger] = "Oh Dear (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong! Please Try Again"
-			render 'edit'
-		end
-	end
-
-	# Edit Title on Home Page
-	def update_title
-		if @user.update_attributes(user_params)
-			# Handle a successful user update
-			flash[:success] = "Your Title Has Been Successfully Updated (ﾉ●ω●)ﾉ*:･ﾟ✧"
-			redirect_to root_url
-		else
-			# Handle an unsuccessful user update
-			flash[:danger] = "Oh Dear (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong! Please Try Again"
-			render 'edit'
-		end
-	end
-
 	private
 		def user_params
 			params.require(:user).permit(:name,

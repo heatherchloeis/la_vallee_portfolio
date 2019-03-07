@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 	get '/about',		 to: "application#about"
 	get '/resume',	 to: "application#resume"
 	get '/work',		 to: "application#work"
-	get '/contact',	 to: "application#contact"
+	get '/contact',  to: "contacts#new"
+	post '/contact', to: "contacts#create"
 	get '/login', 	 to: "sessions#new"
 	post '/login', 	 to: "sessions#create"
 	delete 'logout', to: "sessions#destroy"
@@ -18,5 +19,6 @@ Rails.application.routes.draw do
 	resources :educations
 	resources :experiences
 	resources :examples
+	resources :contacts, 				only: [:new, :create]
 	resources :password_resets, only: [:new, :create, :edit, :update]
 end

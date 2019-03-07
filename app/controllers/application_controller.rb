@@ -24,10 +24,6 @@ class ApplicationController < ActionController::Base
 		@experience = Experience.new
 	end
 
-	def contact
-		@title = "Let's Connect"
-	end
-
 	private
 		# Confirms logged-in user
 		def logged_in_user
