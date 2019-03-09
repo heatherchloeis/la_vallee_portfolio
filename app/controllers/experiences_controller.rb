@@ -2,7 +2,8 @@ class ExperiencesController < ApplicationController
 	before_action :logged_in_user, only: [:create,
 		                                    :update,
                                       	:destroy]
-  before_action :set_experience,	 only: [:update,
+  before_action :set_experience,	 only: [:edit,
+                                          :update,
                                       		:destroy]
 
   def create
@@ -13,6 +14,13 @@ class ExperiencesController < ApplicationController
 			flash[:danger] = "Oh no (づಠ╭╮ಠ)づ Something Seems to Have Gone Wrong with Your Submission! Please Try Again"
   	end
 		redirect_to request.referrer || root_url
+  end
+
+  def edit
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update

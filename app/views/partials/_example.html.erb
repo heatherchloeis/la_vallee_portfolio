@@ -1,5 +1,15 @@
 <% if e.category.to_s == "image" %>
-	<%= image_tag e.content %>
+	<div>
+		<% if logged_in? %>
+			<%= render 'partials/example_menu', e: e %>
+		<% end %>
+		<%= image_tag e.content %>
+	</div>
 <% elsif e.category.to_s == "video" %>
-	<%= video_tag e.content %>
+	<div>
+		<% if logged_in? %>
+			<%= render 'partials/example_menu', e: e %>
+		<% end %>
+		<%= video_tag e.content %>
+	</div>
 <% end %>

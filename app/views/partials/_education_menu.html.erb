@@ -1,0 +1,9 @@
+<a class="float-right" data-toggle="dropdown" id="postMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	<%= icon('fas', 'angle-down') %>
+</a>
+<div class="dropdown-menu" aria-labelledby="postMenuButton">
+	<!-- Edit modal path -->
+	<%= link_to "Edit eduation", edit_education_path(e), class: "dropdown-item", remote: true, data: { target: '#modal_container', toggle: 'modal' } %>
+	<!-- Edit modal path -->
+	<%= link_to "Delete education", e, class: "dropdown-item", method: :delete, data: { confirm: "Are you sure?" } %>
+</div>

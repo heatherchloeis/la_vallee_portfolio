@@ -1,23 +1,19 @@
 <%= form_for(@education) do |f| %>
 	<div class="form-group row">
 		<div class="col">
-			<%= f.label :school %>
-			<%= f.text_field :school, class: "form-control form-control-sm" %>
+			<%= f.text_field :school, placeholder: "University or College", class: "form-control form-control-sm" %>
+		</div>
+
+		<div class="col-auto">
+			<%= f.text_field :year, placeholder: "Graduation Year", class: "form-control form-control-sm" %>
+		</div>
+
+		<div class="col-auto">
+			<%= f.text_field :degree, placeholder: "Degree or Certification", class: "form-control form-control-sm" %>
 		</div>
 
 		<div class="col">
-			<%= f.label :year %>
-			<%= f.text_field :year, class: "form-control form-control-sm" %>
-		</div>
-
-		<div class="col">
-			<%= f.label :degree %>
-			<%= f.text_field :degree, class: "form-control form-control-sm" %>
-		</div>
-
-		<div class="col">
-			<%= f.label :major %>
-			<%= f.text_field :major, class: "form-control form-control-sm" %>
+			<%= f.text_field :major, placeholder: "Major or Area of Study", class: "form-control form-control-sm" %>
 		</div>
 	</div>
 

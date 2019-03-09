@@ -1,3 +1,8 @@
-<p><span class="font-weight-bold"><%= e.school %></span> — <%= e.degree %><br>
-	<span class="font-italic"><%= e.year %></span><br>
-	<%= e.major %></p>
+<% if logged_in? %>
+	<%= render 'partials/education_menu', e: e %>
+<% end %>
+<div>	
+	<p><span class="font-weight-bold"><%= e.school %></span> — <%= e.degree %><br>
+		<span class="font-italic"><%= e.year %></span><br>
+		<%= e.major %></p>
+</div>

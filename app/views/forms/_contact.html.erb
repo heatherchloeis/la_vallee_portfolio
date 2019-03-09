@@ -1,9 +1,11 @@
 <%= form_for(@contact) do |f| %>
-	<%= f.text_field :name, class: "form-control form-control-sm", placeholder: "Name/Company" %>
+	<div class="form-group">
+		<%= f.text_field :name, placeholder: "Name/Company", class: "form-control form-control-sm" %>
 
-	<%= f.text_field :email, class: "form-control form-control-sm", placeholder: "Email" %>
+		<%= f.text_field :email, placeholder: "Email", class: "form-control form-control-sm" %>
 
-	<%= f.text_area :message, class: "form-control form-control-sm", placeholder: "Message", rows: "5" %>
+		<%= f.text_area :message, placeholder: "Message", class: "form-control form-control-sm", rows: "5" %>
+	</div>
 
 	<%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

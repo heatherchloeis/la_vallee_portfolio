@@ -1,12 +1,14 @@
 <%= form_for(@user) do |f| %>
-	<%= f.label :email %>
-	<%= f.text_field :email, class: "form-control form-control-sm" %>
+	<div class="form-group">
+		<%= f.label :email %>
+		<%= f.text_field :email, class: "form-control form-control-sm" %>
 
-	<%= f.label :password %>
-	<%= f.password_field :password, class: "form-control form-control-sm" %>
+		<%= f.label :password %>
+		<%= f.password_field :password, class: "form-control form-control-sm" %>
 
-	<%= f.label :password_confirmation %>
-	<%= f.password_field :password_confirmation, class: "form-control form-control-sm" %>
+		<%= f.label "Confirm password" %>
+		<%= f.password_field :password_confirmation, class: "form-control form-control-sm" %>
+	</div>
 
 	<%= f.submit "Save changes", class: "btn btn-primary" %>
 <% end %>
