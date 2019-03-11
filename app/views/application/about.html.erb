@@ -1,13 +1,16 @@
 <% provide(:title, @title) %>
 
 <div class="row">
-	<div class="col-4 offset-4">
-		<p>About<br>Myself</p>
+	<div class="col-10 offset-1">
+		<p class="about-heading">About</p>
+		<p class="about-heading offset-1">myself</p>
 		<% if logged_in? %>
-			<%= link_to edit_bio_user_path(current_user), class: "float-right" do %>
-				<%= icon('fas', 'edit') %>
+			<%= link_to edit_bio_user_path(current_user), class: "btn-about" do %>
+				<%= icon('far', 'edit') %>
 			<% end %>
 		<% end %>
-		<p><%= markdown(carlie.bio) %></p>
+		<div class="col-xl-7 offset-xl-5 col-lg-8 offset-lg-4 col-md-9 offset-md-3 about-content">
+			<p><%= markdown(carlie.bio) %></p>
+		</div>
 	</div>
 </div>

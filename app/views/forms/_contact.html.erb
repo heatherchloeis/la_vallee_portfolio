@@ -1,11 +1,14 @@
 <%= form_for(@contact) do |f| %>
 	<div class="form-group">
-		<%= f.text_field :name, placeholder: "Name/Company", class: "form-control form-control-sm" %>
+		<%= f.label :name, "Name/Company" %>
+		<%= f.text_field :name, class: "form-control form-control-sm form-contact-input" %>
 
-		<%= f.text_field :email, placeholder: "Email", class: "form-control form-control-sm" %>
+		<%= f.label :email %>
+		<%= f.text_field :email, class: "form-control form-control-sm form-contact-input" %>
 
-		<%= f.text_area :message, placeholder: "Message", class: "form-control form-control-sm", rows: "5" %>
+		<%= f.label :message %>
+		<%= f.text_area :message, class: "form-control form-control-sm form-contact-input", rows: "5" %>
 	</div>
 
-	<%= f.submit "Submit", class: "btn btn-primary" %>
+	<%= f.submit "submit", class: "btn-contact" %>
 <% end %>

@@ -1,0 +1,37 @@
+nav {
+	margin-top: 25px;
+}
+
+.navbar {
+	text-transform: lowercase;
+	a {
+		color: #fff;
+		text-align: right;
+		&.nav-link {
+			padding-left: 25px;
+		}
+		&:hover {
+			color: #fa0023;
+		}
+	}
+}
+
+.navbar-nav {
+	width: 100%;
+}
+
+i.fas.fa-bars {
+	color: #fff;
+}
+
+footer {
+	width: 100%;
+	a {
+		padding: 10px;
+		float: right;
+		color: #000;
+		&:hover {
+			color: rgba(0, 0, 0, .5);
+		}
+	}
+}

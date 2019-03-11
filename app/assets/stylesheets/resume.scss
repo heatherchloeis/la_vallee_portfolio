@@ -1,0 +1,58 @@
+.resume-body {
+	widows: 100%;
+	margin-bottom: 100px;
+}
+
+p {
+	&.resume-heading {
+		font-family: "MADE Canvas";
+		font-size: calc(36px + (200 - 36) * ((100vw - 320px) / (1920 - 320)));
+		font-weight: bold;
+		line-height: calc(18px + (135 - 18) * ((100vw - 320px) / (1920 - 320)));
+		text-transform: lowercase;
+		&:first-of-type {
+			margin-top: 50px;
+		}
+	}
+}
+
+h1.resume-title, h2.resume-company, h2.resume-school, h2.resume-major {
+	display: inline-block;
+	font-family: "Comfortaa";
+	font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+}
+
+h3.resume-experience, h3.resume-education {
+	margin-top: 25px;
+	margin-bottom: calc(18px + (36 - 18) * ((100vw - 320px) / (1920 - 320)));
+	font-family: "Moon 2.0";
+	font-size: calc(18px + (36 - 18) * ((100vw - 320px) / (1920 - 320)));
+}
+
+a {
+	&.resume-menu {
+		float: right;
+		& i:hover {
+			cursor: pointer;
+			color: #fa0023;	
+		}
+	}
+}
+
+.resume-education-content {
+	padding-left: 25px;
+}
+
+.btn-experience, .btn-education {
+	background-color: transparent;
+	border: none;
+	font-family: "MADE Canvas";
+	font-size: 30px;
+	font-weight: bold;
+	float: right;
+	color: #fff;
+	&:hover {
+		color: #fa0023;
+		font-weight: bold;	
+	}
+}

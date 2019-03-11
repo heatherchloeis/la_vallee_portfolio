@@ -1,0 +1,24 @@
+p {
+	&.about-heading {
+		font-family: "MADE Canvas";
+		font-size: calc(36px + (200 - 36) * ((100vw - 320px) / (1920 - 320)));
+		font-weight: bold;
+		line-height: calc(18px + (135 - 18) * ((100vw - 320px) / (1920 - 320)));
+		text-transform: lowercase;
+		&:first-of-type {
+			margin-top: 50px;
+		}
+	}
+}
+
+.about-content {
+	margin-top: 25px;
+}
+
+.btn-about {
+	float: right;
+	color: #fff;
+	&:hover {
+		color: #fa0023;		
+	}
+}

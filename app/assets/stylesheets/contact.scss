@@ -1,0 +1,39 @@
+// Place all the styles related to the Contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+p {
+	&.contact-heading {
+		font-family: "MADE Canvas";
+		font-size: calc(36px + (200 - 36) * ((100vw - 320px) / (1920 - 320)));
+		font-weight: bold;
+		line-height: calc(18px + (135 - 18) * ((100vw - 320px) / (1920 - 320)));
+		text-transform: lowercase;
+		&:first-of-type {
+			margin-top: 50px;
+		}
+	}
+}
+
+.form-contact {
+	padding-top: 15px;
+}
+
+.form-contact-input {
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.btn-contact {
+	background-color: transparent;
+	border: none;
+	font-family: "MADE Canvas";
+	font-size: 30px;
+	font-weight: bold;
+	float: right;
+	color: #fff;
+	&:hover {
+		color: #fa0023;
+		font-weight: bold;
+	}
+}

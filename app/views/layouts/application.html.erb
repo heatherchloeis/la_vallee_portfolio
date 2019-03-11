@@ -6,16 +6,18 @@
     <%= render 'layouts/shim' %>
   </head>
 
-  <body class="container-fluid">
+  <body class="container-fluid parent">
     <% flash.each do |message_type, message| %>
       <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
-    <%= render 'layouts/nav' %>
+    <div class="row no-gutters">
+      <%= render 'layouts/nav' %>
+    </div>
     <%= render 'layouts/modal_container' %>
-    <main class="">
+    <main class="row no-gutters">
       <%= yield %>
     </main>
     <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
+    <!-- <%= debug(params) if Rails.env.development? %> -->
   </body>
 </html>

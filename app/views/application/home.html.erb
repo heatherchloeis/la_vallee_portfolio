@@ -1,23 +1,23 @@
 <% provide(:title, @title) %>
 
-<div class="row">
-	<div class="col-4 offset-4">
-		<p>Portfolio</p>
-		<p>
+<div class="child row">
+	<div class="col-10 offset-1">
+		<h1 class="home-heading">Portfolio</h1>
+		<h1 class="home-name">
+			<% if logged_in? %>
+				<%= link_to edit_name_user_path(current_user), class: "btn-home" do %>
+					<sup><%= icon('far', 'edit') %></sup>
+				<% end %>
+			<% end %>
 			<%= carlie.name %>
+		</h1>
+		<h1 class="home-title">
 			<% if logged_in? %>
-				<%= link_to edit_name_user_path(current_user) do %>
-					<%= icon('fas', 'edit') %>
+				<%= link_to edit_title_user_path(current_user), class: "btn-home" do %>
+					<sup><%= icon('far', 'edit') %></sup>
 				<% end %>
 			<% end %>
-		</p>
-		<p>
 			<%= carlie.title %>
-			<% if logged_in? %>
-				<%= link_to edit_title_user_path(current_user) do %>
-					<%= icon('fas', 'edit') %>
-				<% end %>
-			<% end %>
-			</p>
+		</h1>
 	</div>
 </div>

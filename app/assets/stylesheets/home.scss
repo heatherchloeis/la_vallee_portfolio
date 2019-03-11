@@ -1,0 +1,47 @@
+@import "bootstrap";
+
+.parent {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+h1{
+	&.home-heading {
+		font-family: "MADE Canvas";
+		font-size: calc(60px + (365 - 60) * ((100vw - 320px) / (1920 - 320)));
+		font-weight: bold;
+		text-align: center;
+		text-transform: lowercase;
+	}
+	&.home-name {
+		font-family: "Moon 2.0";
+		font-size: calc(18px + (60 - 18) * ((100vw - 320px) / (1920 - 320)));
+		letter-spacing: calc(1px + (5 - 1) * ((100vw - 320px) / (1920 - 320)));
+		text-align: right;
+		text-transform: uppercase;
+		margin-top: calc(-18px + (-75 + 18) * ((100vw - 320px) / (1920 - 320)));
+		margin-right: 0;
+	}
+	&.home-title {
+		font-family: "Moon 2.0";
+		font-size: calc(14px + (40 - 14) * ((100vw - 320px) / (1920 - 320)));
+		letter-spacing: calc(1px + (5 - 1) * ((100vw - 320px) / (1920 - 320)));
+		text-align: right;
+		margin-right: 0;
+	}
+}
+
+.btn-home {
+	font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+	color: #fff;
+	&:hover {
+		color: #fa0023;	
+		text-decoration: none;	
+	}
+}

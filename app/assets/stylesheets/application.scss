@@ -14,11 +14,53 @@
  *= require_tree .
  */
 
- @import "bootstrap";
- @import "font-awesome-sprockets";
- @import "font-awesome";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@font-face {
+	font-family: "MADE Canvas";
+	src: url("../fonts/MADE_Canvas/MADE_Canvas-Black") format("ttf");
+}
+
+@font-face {
+	font-family: "Comfortaa";
+	src: url("../fonts/Comfortaa/Comfortaa-Regular") format("ttf");
+}
+
+@font-face {
+	font-family: "Moon 2.0";
+	src: url("../fonts/Moon/Moon-Regular") format("otf");
+}
 
 body {
+	margin: 0 !important;
+	padding: 0 !important;
+	min-height: 100vh;
+	overflow-x: hidden;
+	background-image: image-url('background.jpg');
 	background-color: #000;
 	color: #fff;
+	font-family: "Comfortaa";
+	font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.modal-content {
+	background-color: #010206;
+	& .close {
+		color: #fff;
+		opacity: 1;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+}
+
+@include media-breakpoint-down(md) {
+}
+
+@include media-breakpoint-up(lg) {
+}
+
+@include media-breakpoint-up(xl) {
 }
