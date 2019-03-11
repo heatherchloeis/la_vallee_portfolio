@@ -5,7 +5,7 @@
 		<p class="about-heading">About</p>
 		<p class="about-heading offset-1">myself</p>
 		<% if logged_in? %>
-			<%= link_to edit_bio_user_path(current_user), class: "btn-about" do %>
+			<%= link_to bio_edit_user_path(current_user), class: "btn-about", remote: true, data: { target: '#modal_container', toggle: 'modal' } do %>
 				<%= icon('far', 'edit') %>
 			<% end %>
 		<% end %>

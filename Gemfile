@@ -29,6 +29,7 @@ gem 'mini_magick', '~> 4.8'
 
 gem "bootstrap", ">= 4.3.1"
 gem 'popper_js', '~> 1.14.3'
+gem 'masonry-rails'
 gem 'font-awesome-sass', '~> 5.3.1'
 gem 'jquery-rails', '4.3.1'
 gem 'jquery-ui-rails'

@@ -11,9 +11,9 @@ Rails.application.routes.draw do
 
 	resources :users do
 		member do
-			get 'edit_bio',		to: "users#edit_bio"
-			get 'edit_name',	to: "users#edit_name"
-			get 'edit_title',	to: "users#edit_title"
+			get 'bio_edit',		to: "users#bio_edit",		as: 'bio_edit'
+			get 'name_edit',	to: "users#name_edit",	as: 'name_edit'
+			get 'title_edit',	to: "users#title_edit",	as: 'title_edit'
 		end
 	end
 	resources :educations

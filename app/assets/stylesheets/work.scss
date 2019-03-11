@@ -11,8 +11,17 @@ p {
 	}
 }
 
-.works-content {
-	margin-top: 25px;
+.grid {
+	margin-top: 25px 0 0 100px;
+	.grid-sizer, .grid-item {
+		width: 20%;
+	}
+	.grid-item {
+		margin-bottom: 15px;
+	}
+	.grid-item--width2 {
+		width: 40%;
+	}
 }
 
 h3.works-example {
@@ -25,7 +34,7 @@ h3.works-example {
 a {
 	&.works-menu {
 		float: right;
-		& i:hover {
+		i:hover {
 			cursor: pointer;
 			color: #fa0023;	
 		}

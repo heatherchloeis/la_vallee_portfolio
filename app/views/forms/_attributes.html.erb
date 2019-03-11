@@ -1,8 +1,0 @@
-<%= form_for(@user) do |f| %>
-	<%= f.label @attribute.to_sym %>
-	<%= f.text_field @attribute.to_sym, class: "form-control form-control-sm" %>
-
-	<%= f.submit, class: "btn btn-primary" do %>
-		<%= icon('fas', 'check') %>
-	<% end %>
-<% end %>

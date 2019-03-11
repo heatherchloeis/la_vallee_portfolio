@@ -5,7 +5,7 @@
 		<h1 class="home-heading">Portfolio</h1>
 		<h1 class="home-name">
 			<% if logged_in? %>
-				<%= link_to edit_name_user_path(current_user), class: "btn-home" do %>
+				<%= link_to name_edit_user_path(current_user), class: "btn-home", remote: true, data: { target: '#modal_container', toggle: 'modal' } do %>
 					<sup><%= icon('far', 'edit') %></sup>
 				<% end %>
 			<% end %>
@@ -13,7 +13,7 @@
 		</h1>
 		<h1 class="home-title">
 			<% if logged_in? %>
-				<%= link_to edit_title_user_path(current_user), class: "btn-home" do %>
+				<%= link_to title_edit_user_path(current_user), class: "btn-home", remote: true, data: { target: '#modal_container', toggle: 'modal' } do %>
 					<sup><%= icon('far', 'edit') %></sup>
 				<% end %>
 			<% end %>

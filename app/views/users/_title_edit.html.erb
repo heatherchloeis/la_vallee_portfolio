@@ -1,0 +1,15 @@
+<div class="modal-header">
+	<h5 class="text-center">Edit Professional Title</h5>
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	  <i class="fas fa-times"></i>
+	</button>
+</div>
+<div class="modal-body modal-padding-20">
+	<%= form_for(@user) do |f| %>
+		<div class="form-group">
+			<%= f.text_field :title, class: "form-control form-control-sm" %>
+		</div>
+
+		<%= f.submit "save changes", class: "btn-users" %>
+	<% end %>
+</div>

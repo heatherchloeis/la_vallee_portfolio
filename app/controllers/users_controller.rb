@@ -3,10 +3,10 @@ class UsersController < ApplicationController
                                         :update]
 
   before_action :set_user, 			 only: [:edit,
-  																			:update,
-  																			:update_bio,
-  																			:update_name,
-  																			:update_title]
+  																			:bio_edit,
+  																			:name_edit,
+  																			:title_edit,
+  																			:update]
 
 	def index
 		@users = User.all
@@ -14,6 +14,27 @@ class UsersController < ApplicationController
 
 	def edit
 		@user = User.find(params[:id])
+	end
+
+	def bio_edit
+    respond_to do |format|
+      format.html
+      format.js
+    end
+	end
+
+	def name_edit
+    respond_to do |format|
+      format.html
+      format.js
+    end
+	end
+
+	def title_edit
+    respond_to do |format|
+      format.html
+      format.js
+    end
 	end
 
 	def update
@@ -30,12 +51,12 @@ class UsersController < ApplicationController
 
 	private
 		def user_params
-			params.require(:user).permit(:name,
-																	 :email,
-																	 :password,
-																	 :password_confirmation,
-																	 :title,
-																	 :bio)
+			params.permit(:name,
+						 			  :email,
+						 			  :password,
+						 			  :password_confirmation,
+						 			  :title,
+						 			  :bio)
 		end
 
 		def set_user
