@@ -8,6 +8,10 @@ class UsersController < ApplicationController
   																			:title_edit,
   																			:update]
 
+  after_action  :bio_edit,			 only: :update
+  after_action	:name_edit,			 only: :update
+  after_action	:title_edit,		 only: :update
+
 	def index
 		@users = User.all
 	end

@@ -51,8 +51,8 @@ ActiveRecord::Schema.define(version: 2019_03_07_174538) do
   end
 
   create_table "examples", force: :cascade do |t|
-    t.string "title"
     t.string "category"
+    t.string "style"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

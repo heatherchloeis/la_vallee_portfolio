@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 		@title = "About Myself"
 	end
 
-	def work
+	def works
 		@title = "My Work"
 		@example = Example.new
 		@examples = Example.all

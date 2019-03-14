@@ -1,15 +1,19 @@
 <% if e.category.to_s == "image" %>
-	<div class="">
+
+	<div class="grid-item">
 		<% if logged_in? %>
 			<%= render 'partials/example_menu', e: e %>
 		<% end %>
 		<%= image_tag e.content %>
 	</div>
+
 <% elsif e.category.to_s == "video" %>
-	<div>
+
+	<div class="grid-item-wide">
 		<% if logged_in? %>
 			<%= render 'partials/example_menu', e: e %>
 		<% end %>
-		<%= video_tag e.content %>
-	</div>
+ 		<%= video_tag rails_blob_path(e.content), controls: true %>
+ 	</div>
+
 <% end %>

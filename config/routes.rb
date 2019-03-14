@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 	root 'application#home'
 	get '/about',		 to: "application#about"
 	get '/resume',	 to: "application#resume"
-	get '/work',		 to: "application#work"
+	get '/works',		 to: "application#works"
 	get '/contact',  to: "contacts#new"
 	post '/contact', to: "contacts#create"
 	get '/login', 	 to: "sessions#new"

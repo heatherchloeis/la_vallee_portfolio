@@ -11,13 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require jquery-ui
- *= require 'masonry/basic'
- *= require 'masonry/centered'
- *= require 'masonry/fluid'
- *= require 'masonry/gutters'
- *= require 'masonry/infinitescroll'
- *= require 'masonry/right-to-left'
- *= require 'masonry/transitions'
  *= require_tree .
  */
 
@@ -43,13 +36,17 @@
 body {
 	margin: 0 !important;
 	padding: 0 !important;
-	min-height: 100vh;
 	overflow-x: hidden;
-	background-image: image-url('background.jpg');
-	background-color: #000;
 	color: #fff;
 	font-family: "Comfortaa";
 	font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+	min-height: 100vh;
+	height: 100%;
+	background-image: image-url('background.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .modal-content {
