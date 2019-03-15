@@ -1,7 +1,8 @@
 class ExperiencesController < ApplicationController
-	before_action :logged_in_user, only: [:create,
-		                                    :update,
-                                      	:destroy]
+	before_action :logged_in_user,   only: [:create,
+		                                      :edit,
+                                          :update,
+                                      	  :destroy]
   before_action :set_experience,	 only: [:edit,
                                           :update,
                                       		:destroy]

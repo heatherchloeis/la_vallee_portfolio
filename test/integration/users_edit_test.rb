@@ -33,6 +33,39 @@ class UsersEditTest < ActionDispatch::IntegrationTest
 		assert_equal title, @user.title
 	end
 
+	test "valid bio edit" do
+		log_in_as(@user)
+		get about_path
+		assert_select "a:match('href', ?)", bio_edit_user_path(@user)
+		patch user_path(@user), params: { user: { bio: "Lorem ipsum" } }
+		assert_not flash.empty?
+		assert_redirected_to root_url
+		@user.reload
+		assert_equal "Lorem ipsum", @user.bio
+	end
+
+	test "valid name edit" do
+		log_in_as(@user)
+		get root_url
+		assert_select "a:match('href', ?)", name_edit_user_path(@user)
+		patch user_path(@user), params: { user: { name: "Carlie Vallee" } }
+		assert_not flash.empty?
+		assert_redirected_to root_url
+		@user.reload
+		assert_equal "Carlie Vallee", @user.name
+	end
+
+	test "valid title edit" do
+		log_in_as(@user)
+		get root_url
+		assert_select "a:match('href', ?)", name_edit_user_path(@user)
+		patch user_path(@user), params: { user: { title: "Lighting Artist" } }
+		assert_not flash.empty?
+		assert_redirected_to root_url
+		@user.reload
+		assert_equal "Lighting Artist", @user.title
+	end
+
 	test "should redirect edit when not logged in" do
 		get edit_user_path(@user)
 		assert_not flash.empty?

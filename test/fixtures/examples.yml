@@ -1,7 +1,7 @@
 one:
-  title: Sofia
+  style: grid-item
   category: image
 
 two:
-  title: Tarzan
+  style: grid-item-wide
   category: image

@@ -1,6 +1,7 @@
 class ExamplesController < ApplicationController
 	before_action :logged_in_user, 	only: [:create,
-		                                     :update,
+		                                     :edit,
+                                         :update,
                                          :destroy]
   before_action :set_example,	 		only: [:edit,
                                          :update,
@@ -8,6 +9,7 @@ class ExamplesController < ApplicationController
 
   def create
   	@example = Example.new(example_params)
+    @example.content.attach(params[:example][:content])
   	if @example.save
 			flash[:success] = "Congrats (ﾉ●ω●)ﾉ*:･ﾟ✧ You've Successfully Added to Your Portfolio"
 		else
@@ -40,12 +42,12 @@ class ExamplesController < ApplicationController
 
   private
   	def example_params
-  		params.require(:example).permit(:title,
+  		params.require(:example).permit(:style,
   																		:category,
   																		:content)
   	end
 
   	def set_example
-  		@example = Example.find_by(params[:id])
+  		@example = Example.find_by(id: params[:id])
   	end
 end

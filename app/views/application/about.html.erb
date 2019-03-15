@@ -6,7 +6,7 @@
 		<p class="about-heading offset-1">myself</p>
 		<% if logged_in? %>
 			<%= link_to bio_edit_user_path(current_user), class: "btn-about", remote: true, data: { target: '#modal_container', toggle: 'modal' } do %>
-				<%= icon('far', 'edit') %>
+				<i class="far fa-edit"></i>
 			<% end %>
 		<% end %>
 		<div class="col-xl-7 offset-xl-5 col-lg-8 offset-lg-4 col-md-9 offset-md-3 about-content">

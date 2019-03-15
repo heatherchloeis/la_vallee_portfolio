@@ -3,7 +3,7 @@
 
 	<!--Navigation Button-->
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
-    <%= icon('fas', 'bars') %>
+    <i class="fas fa-bars"></i>
   </button>
 
 	<!--Navigation Links-->
@@ -16,11 +16,11 @@
  				<%= link_to "Resume", resume_path, class: "nav-link" %>
  			</li>
  			<li class="col-md-2 nav-item">
- 				<%= link_to "Work", works_path, class: "nav-link" %>
+ 				<%= link_to "Works", works_path, class: "nav-link" %>
  			</li>
  			<li class="col-md-2 nav-item">
  				<%= link_to edit_user_path(current_user), class: "nav-link" do %>
- 					<%= icon('fas', 'cog') %>
+ 					<i class="fas fa-cog"></i>
  				<% end %>
  			</li>
  		</ul>

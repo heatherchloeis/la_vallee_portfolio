@@ -9,7 +9,7 @@
 			<%= render 'forms/example' %>
 		<% end %>
 	</div>
-	<div class="row no-gutters grid">
+	<div class="grid">
 		<% if Example.any? %>
 			<% @examples.each do |e| %>
 				<%= render 'partials/example', e: e %>

@@ -6,7 +6,7 @@
 		<h1 class="home-name">
 			<% if logged_in? %>
 				<%= link_to name_edit_user_path(current_user), class: "btn-home", remote: true, data: { target: '#modal_container', toggle: 'modal' } do %>
-					<sup><%= icon('far', 'edit') %></sup>
+					<sup><i class="far fa-edit"></i></sup>
 				<% end %>
 			<% end %>
 			<%= carlie.name %>
@@ -14,7 +14,7 @@
 		<h1 class="home-title">
 			<% if logged_in? %>
 				<%= link_to title_edit_user_path(current_user), class: "btn-home", remote: true, data: { target: '#modal_container', toggle: 'modal' } do %>
-					<sup><%= icon('far', 'edit') %></sup>
+					<sup><i class="far fa-edit"></i></sup>
 				<% end %>
 			<% end %>
 			<%= carlie.title %>

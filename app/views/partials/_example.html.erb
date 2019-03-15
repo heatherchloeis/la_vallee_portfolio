@@ -1,19 +1,23 @@
 <% if e.category.to_s == "image" %>
 
 	<div class="grid-item">
-		<% if logged_in? %>
-			<%= render 'partials/example_menu', e: e %>
-		<% end %>
-		<%= image_tag e.content %>
+		<div class="grid-item-content">
+			<% if logged_in? %>
+				<%= render 'partials/example_menu', e: e %>
+			<% end %>
+			<%= image_tag e.content if e.content.attached? %>
+		</div>
 	</div>
 
 <% elsif e.category.to_s == "video" %>
 
-	<div class="grid-item-wide">
-		<% if logged_in? %>
-			<%= render 'partials/example_menu', e: e %>
-		<% end %>
- 		<%= video_tag rails_blob_path(e.content), controls: true %>
+	<div class="grid-item <%= e.style if !e.style.nil? %>">
+		<div class="grid-item-content">
+			<% if logged_in? %>
+				<%= render 'partials/example_menu', e: e %>
+			<% end %>
+			<%= video_tag (rails_blob_path(e.content) if e.content.attached?), controls: true %>
+		</div>
  	</div>
 
 <% end %>
