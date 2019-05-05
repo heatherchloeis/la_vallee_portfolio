@@ -3,7 +3,7 @@ User.create!(name: "Carlie La Vallee",
 						 password: "cretillia",
 						 password_confirmation: "cretillia",
 						 title: "3D Lighting Artist",
-						 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt lorem. Donec ac est lorem. Ut vitae magna facilisis, tincidunt quam ac, fringilla nunc. Morbi at facilisis augue. Sed vitae iaculis odio, non blandit justo. Vestibulum posuere vel enim eu viverra. Sed aliquam ornare arcu, sed suscipit risus. Nulla tristique ante quis euismod pharetra. Nunc bibendum, augue vel mollis consectetur, orci lectus condimentum metus, id viverra augue est eu ante. Donec sit amet sem erat. Aenean ut euismod arcu. Donec fermentum tincidunt quam ut facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.")
+						 bio: "This is Carlie La Vallee's website, and this is a small bio about her. She is an indigenious artist from Saskatchewana and currently a Lighting Tech Artist with Icon Creative Studios where she's already worked on a lot of big animation projects. Her experience includes working on shows with large companies such as Disney and Netflix. That doesn't give you the whole story, but if you want more details you can check out the rest of her portfolio.")
 
 Education.create!(school: "Art Institue, Vancouver",
 									year: "2012 - 2014",
