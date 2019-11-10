@@ -24,8 +24,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem "loofah", ">= 2.3.1"
+gem "nokogiri", ">= 1.10.4"
+
 # Use ActiveStorage variant
-gem 'mini_magick', '~> 4.8'
+gem "mini_magick", ">= 4.9.4"
 
 gem "bootstrap", ">= 4.3.1"
 gem 'popper_js', '~> 1.14.3'
@@ -61,7 +64,7 @@ group :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper', '1.2.0'
+  gem 'webdrivers', '~> 4.0'
   gem 'rails-controller-testing', '1.0.2'
 end
 
