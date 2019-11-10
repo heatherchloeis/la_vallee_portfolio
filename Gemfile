@@ -26,6 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem "loofah", ">= 2.3.1"
 gem "nokogiri", ">= 1.10.4"
+gem "rubyzip", ">= 1.3.0"
 
 # Use ActiveStorage variant
 gem "mini_magick", ">= 4.9.4"
